@@ -1,0 +1,53 @@
+<div class="font-mono">
+  <div class="container-sm">
+    <div class="form-group text-lg border border-success login-form ">
+      <div class="form-group p-5">
+        <div class="text-center text-5xl">Welcome to...</div>
+        <label for="">Username</label>
+        <input type="text" name="" id="username" class="form-control" placeholder="Input your username..." />
+        <p id="usernameFail" class="text-danger"></p>
+        <label for="" class="">Password</label>
+        <input type="password" class="form-control" placeholder="Input your password..." id="Password" />
+        <p id="passwordFail" class="text-danger"></p>
+        <input type="checkbox" onclick="ShowPasword()" />Show Password
+        <br>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+        <br />
+        <button type="submit" class="btn btn-primary mt-3" id="btn" onclick="window.location.href='/home.html'">
+          Submit
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function ShowPasword() {
+    var x = document.getElementById("Password");
+    if (x.type === "password") {
+      x.type = "text";
+    } else {
+      x.type = "password";
+    }
+  }
+  btn.addEventListener("click", function () {
+    if (username.value == "") {
+      usernameFail.innerHTML = "Username is required";
+      notification.innerHTML = "";
+      return false;
+    } else {
+      usernameFail.innerHTML = "";
+    }
+
+    if (Password.value == "") {
+      passwordFail.innerHTML = "Password is required";
+      notification.innerHTML = "";
+    } else {
+      passwordFail.innerHTML = "";
+    }
+
+
+  });
+</script>
